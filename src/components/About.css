@@ -1,5 +1,6 @@
 .about {
   animation: fadeIn 1s ease;
+  overflow-y: hidden;
 }
 
 .page-title {
@@ -22,7 +23,8 @@
 }
 
 .about-grid {
-  display: grid;
+
+  display: grid;overflow-y: hidden;
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
   margin-bottom: 3rem;
@@ -33,6 +35,7 @@
   padding: 2rem;
   border-radius: 15px;
   box-shadow: var(--shadow);
+  overflow-y: hidden;
 }
 
 .about-card h2 {

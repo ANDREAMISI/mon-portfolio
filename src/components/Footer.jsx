@@ -44,10 +44,10 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Suivez-moi</h4>
             <div className="footer-social">
-              <a href="#" className="social-link"><FaFacebookF /></a>
-              <a href="#" className="social-link"><FaTwitter /></a>
-              <a href="#" className="social-link"><FaLinkedinIn /></a>
-              <a href="#" className="social-link"><FaGithub /></a>
+              <a href="https://www.facebook.com/share/18U8CbtdUy/?mibextid=wwXIfr" className="social-link"><FaFacebookF /></a>
+              <a href="https://x.com/andramisi454348?s=21" className="social-link"><FaTwitter /></a>
+              <a href="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav" className="social-link"><FaLinkedinIn /></a>
+              <a href="https://github.com/ANDREAMISI" className="social-link"><FaGithub /></a>
             </div>
           </div>
         </div>

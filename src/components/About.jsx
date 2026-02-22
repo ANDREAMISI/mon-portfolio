@@ -28,7 +28,7 @@ const About = () => {
   const trainings = [
     {
       name: 'Développement web fullstack',
-      organization: 'SkyNet-Burundi (Talent4StartUp)',
+      organization: 'SkyNet-Burundi (Talent4StartUps)',
       period: '2025 - 2026'
     },
     {

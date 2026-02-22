@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -23,22 +25,43 @@ const Contact = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    // Ici, vous ajouterez la logique d'envoi du formulaire
-    console.log('Formulaire soumis:', formData);
-    setFormStatus({
-      submitted: true,
-      success: true,
-      message: 'Message envoyé avec succès ! Je vous répondrai bientôt.'
-    });
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-  };
+  e.preventDefault();
 
+  emailjs.send(
+    "service_22t2h84",
+    "template_drf9lgu",
+    {
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    },
+    "jwniokVu077ioURjn"
+  )
+  .then(
+    (result) => {
+      setFormStatus({
+        submitted: true,
+        success: true,
+        message: "Message envoyé avec succès ! Je vous répondrai bientôt."
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: ""
+      });
+    },
+    (error) => {
+      setFormStatus({
+        submitted: true,
+        success: false,
+        message: "Une erreur s'est produite. Veuillez réessayer."
+      });
+    }
+  );
+};
   const contactInfo = [
     {
       icon: '📧',
@@ -59,10 +82,10 @@ const Contact = () => {
       link: null
     },
     {
-      icon: '💼',
+      icon: '🔗',
       title: 'LinkedIn',
       value: 'ANDRE AMSI',
-      link: '#'
+      link: 'https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav'
     },
     {
       icon: '🐙',
@@ -74,7 +97,7 @@ const Contact = () => {
       icon: '🌐',
       title: 'Portfolio',
       value: 'github.com/ANDREAMISI/Portfolio',
-      link: 'https://github.com/ANDREAMISI/Portfolio'
+      link: 'https://andreamisi.github.io/mon-portfolio/'
     }
   ];
 
@@ -111,10 +134,10 @@ const Contact = () => {
           <div className="social-links">
             <h3>Suivez-moi</h3>
             <div className="social-icons">
-              <a href="#" className="social-icon">📘</a>
-              <a href="#" className="social-icon">🐦</a>
-              <a href="#" className="social-icon">📷</a>
-              <a href="#" className="social-icon">💼</a>
+              <a href="https://www.facebook.com/share/18U8CbtdUy/?mibextid=wwXIfr" className="social-link"><FaFacebookF /></a>
+              <a href="https://x.com/andramisi454348?s=21" className="social-link"><FaTwitter /></a>
+              <a href="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav" className="social-link"><FaLinkedinIn /></a>
+              <a href="https://github.com/ANDREAMISI" className="social-link"><FaGithub /></a>
             </div>
           </div>
         </div>
