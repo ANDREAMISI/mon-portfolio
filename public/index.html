@@ -1,43 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="theme-color" content="#1e3c72" />
+    
+    <!-- 
+      Description complète pour le SEO
+    -->
+    <meta name="description" content="Portfolio de ANDRE AMISI RICHARD, développeur web front-end basé à Bujumbura. Découvrez mes projets React, Laravel, mon parcours et mes compétences." />
+    <meta name="keywords" content="ANDRE AMISI RICHARD, développeur web, front-end, React, Laravel, PHP, JavaScript, Bujumbura, Burundi, portfolio, CV" />
+    <meta name="author" content="ANDRE AMISI RICHARD" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="French" />
+    
+    <!-- 
+      Open Graph / Facebook / LinkedIn 
+      (pour les aperçus quand on partage le lien)
+    -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://andreamisi.github.io/mon-portfolio" />
+    <meta property="og:title" content="ANDRE AMISI RICHARD - Développeur Web Front-end" />
+    <meta property="og:description" content="Portfolio et CV de ANDRE AMISI RICHARD, développeur web basé à Bujumbura. Découvrez mes projets React, Laravel et mon parcours." />
+    <meta property="og:image" content="%PUBLIC_URL%/profile-preview.jpg" />
+    <meta property="og:site_name" content="ANDRE AMISI RICHARD - Portfolio" />
+    
+    <!-- 
+      Twitter Card 
+      (pour les aperçus sur Twitter/X)
+    -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ANDRE AMISI RICHARD - Développeur Web Front-end" />
+    <meta name="twitter:description" content="Portfolio et CV de ANDRE AMISI RICHARD, développeur web basé à Bujumbura." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/profile-preview.jpg" />
+    <meta name="twitter:creator" content="@andreamisi" />
+    
+    <!-- 
+      Apple Touch Icon 
+      (icône pour les iPhones/iPad quand on ajoute à l'écran d'accueil)
+    -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    
+    <!-- 
+      Manifest pour PWA (Progressive Web App)
+      (permet d'installer le site comme une application)
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    
+    <script>
+  // Redirection pour les pages en deep linking
+  (function() {
+    const redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    if (redirect && redirect !== location.href) {
+      history.replaceState(null, null, redirect);
+    }
+  })();
+  </script>
+  <!-- Vérification Google Search Console (à obtenir sur search.google.com) -->
+<meta name="google-site-verification" content="VOTRE-CODE-DE-VERIFICATION" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
+<!-- Vérification Bing Webmaster Tools (optionnel) -->
+<meta name="msvalidate.01" content="VOTRE-CODE-BING" />
+
+<!-- Balises de localisation pour le SEO local -->
+<meta name="geo.region" content="BI" />
+<meta name="geo.placename" content="Bujumbura" />
+<meta name="geo.position" content="-3.361;29.360" /> <!-- Coordonnées de Bujumbura -->
+
+<!-- Couleur de la barre d'adresse sur Chrome mobile -->
+<meta name="theme-color" content="#1e3c72" />
+
+<!-- Couleur de la barre d'état sur les appareils Samsung -->
+<meta name="msapplication-navbutton-color" content="#1e3c72" />
+
+<!-- Couleur de la barre d'état sur iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#1e3c72" />
+
+<!-- Pinterest -->
+<meta name="pinterest" content="nopin" description="Désolé, vous ne pouvez pas épingler ce site" />
+
+<!-- LinkedIn spécifique -->
+<meta property="linkedin:owner" content="andreamisi" />
+
+<!-- WhatsApp -->
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+
+    <!-- 
+      Titre de la page (sera souvent remplacé par React Helmet)
     -->
-    <title>React App</title>
+    <title>ANDRE AMISI RICHARD - Développeur Web Front-end</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <div style="text-align: center; padding: 40px; font-family: Arial, sans-serif;">
+        <h1>ANDRE AMISI RICHARD</h1>
+        <p>Développeur Web Front-end</p>
+        <p>Veuillez activer JavaScript pour voir mon portfolio.</p>
+        <p>Please enable JavaScript to view my portfolio.</p>
+      </div>
+    </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

@@ -14,20 +14,20 @@ function App() {
 
   const renderPage = () => {
     switch(currentPage) {
-      case 'home':
-        return <Home />;
-      case 'about':
+      case 'home': 
+        return <Home setCurrentPage={setCurrentPage} />;  // Passage de la props
+      case 'about': 
         return <About />;
-      case 'projects':
+      case 'projects': 
         return <Projects />;
-      case 'skills':
+      case 'skills': 
         return <Skills />;
-      case 'contact':
+      case 'contact': 
         return <Contact />;
-      case 'cv':
+      case 'cv': 
         return <CV />;
-      default:
-        return <Home />;
+      default: 
+        return <Home setCurrentPage={setCurrentPage} />;
     }
   };
 
@@ -37,7 +37,7 @@ function App() {
       <main className="main-content">
         {renderPage()}
       </main>
-      <Footer />
+      <Footer setCurrentPage={setCurrentPage} />  {/* Passage de la props */}
     </div>
   );
 }
