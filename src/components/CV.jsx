@@ -1,15 +1,8 @@
 import React from 'react';
 import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md';
-import { GiSkills } from 'react-icons/gi';
 import { GrProjects } from 'react-icons/gr';
-import { PiReadCvLogoFill } from 'react-icons/pi';
-import { MdOutlineRoundaboutRight } from 'react-icons/md';
-import { FaHome} from "react-icons/fa";
 import { MdContactPhone } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
 import { IoPersonAdd } from "react-icons/io5";
 import profil from '../assets/profil.jpg';
 
@@ -20,12 +13,12 @@ const ProfessionalCV = () => {
   const personalInfo = {
     name: 'ANDRE AMISI RICHARD',
     title: 'Développeur Web Front-end',
-    location: 'Kamituga / RDC',
+    location: 'Ngagara / Bujumbura',
     email: 'andreamisi541@gmail.com',
     phone: '+243978352541',
     linkedin: 'ANDRE AMSI',
     github: 'ANDREAMISI',
-    portfolio: 'https://github.com/ANDREAMISI/Portfolio'
+    portfolio: 'https://github.com/ANDREAMISI/mon-portfolio'
   };
 
   // Compétences techniques
@@ -147,9 +140,10 @@ const ProfessionalCV = () => {
       <header className="cv-header">
         <div className="cv-header-content">
           {/* Zone photo de profil modifiable */}
-          <div className="profile-photo-container">
-            <div className="profile-photo-placeholder">
-              <span><img src={profil} alt="Profil" className="profile-photo" /></span>
+          <div className="profile-photo-container"> 
+              <img src={profil} alt="Profil" className="profile-photo" />
+            <div className="profile-photo-placeholder"> 
+              <span> <IoPersonAdd/></span>
             </div>
             <div className="photo-overlay">
               <span>Modifier</span>
