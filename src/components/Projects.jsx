@@ -41,7 +41,7 @@ const Projects = () => {
       period: '02/02/2026 - 05/02/2026',
       description: 'Clone de Disney+ utilisant l\'API TMDB. Projet réalisé pendant la formation Skynet-Burundi.',
       technologies: ['React', 'API', 'CSS'],
-      link: 'https://github.com/ANDREAMISI/SkyMovie',
+      link: 'https://andreamisi.github.io/skymovie',
       image: '🎬',
       category: 'react'
     },
