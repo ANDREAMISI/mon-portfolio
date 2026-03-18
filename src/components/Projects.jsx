@@ -81,7 +81,7 @@ const Projects = () => {
       period: '15/01/2026 - 20/01/2026',
       description: 'Site web collaboratif pour une entreprise congolaise. Projet d\'équipe avec Narcis et Gisèle.',
       technologies: ['HTML', 'CSS', 'JavaScript'],
-      link: 'https://andreamisi.github.io/super_service/',
+      link: 'https://andreamisi.github.io/supers-services/',
       image: '🏢',
       category: 'frontend'
     },
